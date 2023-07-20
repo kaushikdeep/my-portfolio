@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Comatible" content="IE=edge">
         <meta name="viewport" content="width=dervice-width, initial-scale=1.0">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">    
+        <link rel="stylesheet" href="style.css">   
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> 
     </head>
     <body>
         <div id="header">
@@ -21,10 +22,96 @@
                     </ul>
                 </nav>
                 <div class="header-text">
-                <p>UI/UX Desinger</p>
-                <h1>Hi, I'm <span>Kaushik</span><br>Jen From India</h1>
+                    <p>UI/UX Desinger</p>
+                    <h1>Hi, I'm <span>Kaushik</span><br>Jen From India</h1>
+                </div>
             </div>
         </div>
+        <!-- --------------about---------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>This website design will be completely responsive for all screen devices like mobile phones. We will this complete website design step by step using HTML CSS and JavaScript.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"  onclick="opentab('experience')">Experinence</p>
+                            <p class="tab-links"  onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI?UK</span><br>Designing web/app interfaces</li>
+                                <li><span>Wed Development</span><br>Wed app Development</li>
+                                <li><span>Wed Development</span><br>Building Android/iOS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - current</span><br>UI/UX Design Training at ET Institute</li>
+                                <li><span>2019 - 2021</span><br>Team lead at Starapp LLC.</li>
+                                <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                                <li><span>2016 - 2017</span><br>Intership at ekart eCommerce.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX Design Training at ET institute</li>
+                                <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                                <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------services------------ -->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fas fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Loren ipsm dolor sit amet, consectetur adipscing elit, sed mulla nibh, tincidunt sit amet sapien quis.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-crop-alt"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Loren ipsm dolor sit amet, consectetur adipscing elit, sed mulla nibh, tincidunt sit amet sapien quis.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fab fa-app-store"></i>
+                        <h2>app Design</h2>
+                        <p>Loren ipsm dolor sit amet, consectetur adipscing elit, sed mulla nibh, tincidunt sit amet sapien quis.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }   
+
+        </script>
 
 
     </body>
